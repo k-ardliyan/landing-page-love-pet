@@ -13,7 +13,7 @@ Bila teman-teman yang mampir disini mau berkolaborasi dalam konversi desain ke t
 
 ![Love Pet Web Design](https://cdn.dribbble.com/users/6867673/screenshots/16757696/media/63d3f8af101950d6312c5f55ca1f44c9.png)
 
-## <p align="center"> [Demo Website ![new_tab](https://img.icons8.com/cotton/18/000000/external-link--v1.png)](https://k-ardliyan.github.io/landing-page-love-pet/)
+## <p align="center"> [Demo Website ![new_tab](https://img.icons8.com/cotton/18/000000/external-link--v1.png)](https://landing-page-love-pet.vercel.app)
 
 </p>
 
