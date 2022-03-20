@@ -42,7 +42,7 @@ nav .btn-primary:focus, header .btn-primary:focus, nav .btn-primary:active, head
           box-shadow: 0 0 0 0.25rem #ffac67 !important;
 }
 
-nav .btn-outline-primary, section.featured .btn-outline-primary {
+nav .btn-outline-primary, section.about button#btn_prev, section.about button#btn_next, section.featured .btn-outline-primary {
   padding: 1rem 1.5rem;
   color: #E66900 !important;
   border: 2px solid #E66900 !important;
@@ -50,12 +50,12 @@ nav .btn-outline-primary, section.featured .btn-outline-primary {
   font-weight: 600;
 }
 
-nav .btn-outline-primary:hover, section.featured .btn-outline-primary:hover {
+nav .btn-outline-primary:hover, section.about button#btn_prev:hover, section.about button#btn_next:hover, section.featured .btn-outline-primary:hover {
   background-color: #E66900 !important;
   color: white !important;
 }
 
-nav .btn-outline-primary:focus, section.featured .btn-outline-primary:focus, nav .btn-outline-primary:active, section.featured .btn-outline-primary:active {
+nav .btn-outline-primary:focus, section.about button#btn_prev:focus, section.about button#btn_next:focus, section.featured .btn-outline-primary:focus, nav .btn-outline-primary:active, section.about button#btn_prev:active, section.about button#btn_next:active, section.featured .btn-outline-primary:active {
   -webkit-box-shadow: 0 0 0 0.25rem #ffac67 !important;
           box-shadow: 0 0 0 0.25rem #ffac67 !important;
 }
@@ -139,6 +139,7 @@ header {
 
 header h1 {
   line-height: 4.6875rem;
+  max-width: 30rem;
 }
 
 header .btn-videos {
@@ -165,6 +166,18 @@ section.about h2::after {
 
 section.about p {
   margin-bottom: 3rem;
+}
+
+section.about button#btn_prev, section.about button#btn_next {
+  padding: 10px 14px;
+}
+
+section.about button#btn_prev:active, section.about button#btn_next:active {
+  background-color: #E66900 !important;
+}
+
+section.about button#btn_prev:active .fa, section.about button#btn_next:active .fa {
+  color: white;
 }
 
 section.featured {
@@ -234,6 +247,11 @@ section.featured .card .card-body .btn-primary {
   background-color: #E66900;
   border: none;
   opacity: 0.6;
+}
+
+section.featured .card .card-body .btn-primary:focus {
+  -webkit-box-shadow: 0 0 0 0.25rem #ffac67 !important;
+          box-shadow: 0 0 0 0.25rem #ffac67 !important;
 }
 
 section.featured .card .card-body.card-diff {

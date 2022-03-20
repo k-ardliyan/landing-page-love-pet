@@ -1,0 +1,70 @@
+nav {
+    background-color: #fde7cf;
+
+    a {
+        &.navbar-brand {
+            font-family: $font-logo;
+            font-size: 1.5rem;
+            color: $color-primary !important;
+
+            span {
+                margin-left: -0.75rem;
+            }
+        }
+
+        img {
+            max-width: 6.5rem;
+        }
+
+        &.nav-link {
+            font-weight: 500;
+            color: $color-primary !important;
+            opacity: 0.7;
+
+            &.active {
+                opacity: 1;
+                font-weight: 600;
+            }
+
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+
+    .navbar-toggler {
+        color: $color-primary !important;
+        border: 1.5px solid $color-primary !important;
+
+        .fa {
+            padding: .4rem;
+        }
+
+        &:focus {
+            box-shadow: 0 0 0 3px lighten($color: $color-primary, $amount: 20%);
+            border-color: transparent !important;
+        }
+
+        &[aria-expanded="true"]>.fa-bars {
+            transform: rotate(270deg) !important;
+            transition: all .3s ease;
+        }
+
+        &[aria-expanded="false"]>.fa-bars {
+            transform: rotate(0deg) !important;
+            transition: all .3s ease;
+        }
+    }
+
+    .btn {
+        min-width: 9rem;
+    }
+
+    .btn-outline-primary {
+        @extend %btn-outline-primary;
+    }
+
+    .btn-primary {
+        @extend %btn-primary;
+    }
+}

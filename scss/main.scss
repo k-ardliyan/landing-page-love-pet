@@ -1,4 +1,3 @@
-@import "mixins";
 @import "variables";
 
 @import url("https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css");
@@ -68,77 +67,6 @@ body {
     color: $color-primary;
 }
 
-nav {
-    background-color: #fde7cf;
-
-    a {
-        &.navbar-brand {
-            font-family: $font-logo;
-            font-size: 1.5rem;
-            color: $color-primary !important;
-
-            span {
-                margin-left: -0.75rem;
-            }
-        }
-
-        img {
-            max-width: 6.5rem;
-        }
-
-        &.nav-link {
-            font-weight: 500;
-            color: $color-primary !important;
-            opacity: 0.7;
-
-            &.active {
-                opacity: 1;
-                font-weight: 600;
-            }
-
-            &:hover {
-                opacity: 1;
-            }
-        }
-    }
-
-    .navbar-toggler {
-        color: $color-primary !important;
-        border: 1.5px solid $color-primary !important;
-
-        .fa {
-            padding: .4rem;
-        }
-
-        &:focus {
-            box-shadow: 0 0 0 3px lighten($color: $color-primary, $amount: 20%);
-            border-color: transparent !important;
-        }
-
-        &[aria-expanded="true"]>.fa-bars {
-            transform: rotate(270deg) !important;
-            transition: all .3s ease;
-        }
-
-        &[aria-expanded="false"]>.fa-bars {
-            transform: rotate(0deg) !important;
-            transition: all .3s ease;
-        }
-    }
-
-    .btn {
-        min-width: 9rem;
-    }
-
-    .btn-outline-primary {
-        @extend %btn-outline-primary;
-    }
-
-    .btn-primary {
-        @extend %btn-primary;
-    }
-}
-
 @import "navbar";
 
 header {
@@ -148,6 +76,7 @@ header {
     h1 {
         @extend %h;
         line-height: 4.6875rem;
+        max-width: 30rem;
     }
 
     .btn-primary {
@@ -178,6 +107,17 @@ section.about {
 
     p {
         margin-bottom: 3rem;
+    }
+
+    button#btn_prev, button#btn_next {
+        @extend %btn-outline-primary;
+        padding: 10px 14px;
+        &:active {
+            .fa {
+                color: white;
+            }
+            background-color: $color-primary !important;
+        }
     }
 }
 
@@ -246,6 +186,9 @@ section.featured {
                 background-color: $color-primary;
                 border: none;
                 opacity: 0.6;
+                &:focus {
+                    box-shadow: 0 0 0 0.25rem lighten($color: $color-primary, $amount: 25%) !important;
+                }
             }
 
             &.card-diff {
@@ -366,79 +309,6 @@ section.contact {
                     }
                 }
             }
-        }
-    }
-}
-
-footer {
-    color: #805603;
-    margin-top: 10.25rem;
-    padding-top: 3rem;
-    padding-bottom: 2.75rem;
-    background-color: #fde7cf;
-    .brand {
-        .navbar-brand {
-            letter-spacing: 1px;
-            font-family: $font-logo;
-            font-size: 1.5rem;
-            color: $color-primary !important;
-    
-            span {
-                margin-left: -0.75rem;
-            }
-    
-            .logo-brand {
-                max-width: 6.5rem;
-                margin-left: -1.5rem;
-            }
-        }
-        p {
-            max-width: 23rem;
-        }
-    }
-
-    ul {
-        margin-top: 32px;
-        li{
-            margin-bottom: 1.25rem;
-            &.list-title {
-                letter-spacing: 0;
-                color: #805603;
-                font-weight: bold;
-                font-size: 1.25rem;
-                line-height: 1.875rem;
-            }
-            a {
-                text-decoration: none;
-                color: #805603;
-                &:hover {
-                    color: lighten($color: #805603, $amount: 20%);
-                }
-            }
-        }
-    }
-    
-    .sosmed {
-        margin-top: 6.75rem;
-        a {
-            color: #805603;
-            font-size: 24px;
-            &:hover {
-                color: lighten($color: #805603, $amount: 20%);
-            }
-        } 
-    }
-    .copyright {
-        margin-top: 9rem;
-    }
-
-    @media screen and (max-width: 991px) {
-        .sosmed {
-            margin-top: 1.5rem;
-            margin-bottom: 1rem;
-        }
-        .copyright {
-            margin-top: 2rem;
         }
     }
 }
